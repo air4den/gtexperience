@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your GT Purity Score</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <a href="index.html">
+            <img src="public/hero2.png" alt="Georgia Tech Purity Test" class="hero-img">
+        </a>
+        <div class="description">
+            <p><em>This test has been created by the students for the students. It serves as a way to track the maturation of your Georgia Tech experience outside of the classroom. If you are unfamiliar with a specific question, don’t worry. This school will teach you soon enough.</em></p>
+            <p><strong>Warning: This is not a bucket list. GT Purity Test is not liable for ANY injury, death, or other consequence as a result of using this webpage, and we do NOT recommend attempting any item on this list.</strong></p>
+            <p>Select every item you have done.</p>
+        </div>
+    </header>
+    <main>
+      <h2>Your Georgia Tech Purity Test Score:</h2>
+      <div id="score-display"></div>
+      <button type="button" class="button" id="take-again-button">Take Again!</button>
+      <p>Have a suggestion to improve the test? <br/><a href="https://forms.gle/YX7XD2xyibvj7jcGA">We’re listening.</a></p>
+    </main>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const score = params.get("score");
+
+      const scoreDisplay = document.getElementById("score-display");
+      if (score !== null) {
+        scoreDisplay.textContent = `${score}`;
+      } else {
+        scoreDisplay.textContent = "No score available.";
+      }
+      const takeAgain = document.getElementById("take-again-button");
+      takeAgain.addEventListener("click", ()=> {
+        window.location.href = "index.html";
+      })
+    </script>
+</body>
