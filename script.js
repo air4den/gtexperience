@@ -50,7 +50,7 @@ const questions = [
     "Rode a waterslide during Wet Weekend?",
     "Partook in a Silly Week bender?",
     "Blacked out during Wet Weekend?",
-    "Backed out at a Tailgate?",
+    "Blacked out at a Tailgate?",
     "Frat hopped during Halloweekend?",
     "Stood in line for over 30 minutes to get into a party?",
     "Jumped a fence to get into a party?",
